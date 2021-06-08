@@ -1,15 +1,6 @@
 const router = require('express').Router();
 const {getPost, addPost, getPostId, updatePost, deletePost} = require('../controllers/postController');
 
-//intial test for router without controller
-// router.get('/post', (req, res)=>{
-//     res.send('Hello from post router')
-// })
-
-// with controller
-// router.get('/post', )
-
-
 //get post
 
 router.get('/post', getPost)
@@ -29,7 +20,16 @@ router.put('/post/update/:id', updatePost)
 
 //delete a specific post
 
-router.delete('/post', deletePost)
+router.delete('/post/:id', deletePost)
+
+
+//intial test for router without controller
+// router.get('/post', (req, res)=>{
+//     res.send('Hello from post router')
+// })
+
+// with controller
+// router.get('/post', )
 
 
 
