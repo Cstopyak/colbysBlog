@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const fileUpload = require('express-fileupload');
+const fs = require('fs');
 const app = express();
 
 // middleware 
@@ -36,9 +37,9 @@ useUnifiedTopology:true
 
 
 //routes
-
+app.use('user/', require('./server/routes/loginRegRoute'));
 app.use('/', require('./server/routes/postRoute'));
-
+app.use('/', require('./server/routes/uploadImg'));
 PORT=process.env.PORT || 5000;
 
 app.listen(PORT,()=>{
