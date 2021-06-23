@@ -25,7 +25,7 @@ router.post('/upload', (req, res) => {
             return res.status(400).send('no files uploaded this time')
         }
 
-        const file = req.files.file; //put blog is this doesnt work
+        const file = req.files.file; //put blog if this doesnt work
         if (file.size > 1024*1024) {
             removeTmp(file.tempFilePath);
             return res.status(400).json({ msg: 'file size too big' })
