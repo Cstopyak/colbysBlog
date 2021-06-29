@@ -5,7 +5,7 @@ import Nav from './components/views/Nav';
 import Header from './components/views/Header';
 import BlogContent from './components/views/BlogContent';
 import Footer from './components/views/Footer';
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">
